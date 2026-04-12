@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="700" height="1375" viewBox="-25 -25 1400 2750"
+xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect width="1350" height="2700" x="0" y="0" fill="#C0D0C0" id="table"/> <rect width="1400" height="25" x="-25" y="-25" fill="darkgreen" />
+ <rect width="1400" height="25" x="-25" y="2700" fill="darkgreen" />
+ <rect width="25" height="2750" x="-25" y="-25" fill="darkgreen" />
+ <rect width="25" height="2750" x="1350" y="-25" fill="darkgreen" />
+ <circle cx="0" cy="0" r="114" fill="black" />
+ <circle cx="0" cy="1350" r="114" fill="black" />
+ <circle cx="0" cy="2700" r="114" fill="black" />
+ <circle cx="1350" cy="0" r="114" fill="black" />
+ <circle cx="1350" cy="1350" r="114" fill="black" />
+ <circle cx="1350" cy="2700" r="114" fill="black" />
+ <circle cx="557" cy="844" r="28.5" fill="ORANGE" />
+ <circle cx="340" cy="2321" r="28.5" fill="RED" />
+<circle cx="340" cy="2321" r="18.5" fill="GHOSTWHITE" />
+<circle cx="340" cy="2321" r="8.5" fill="RED" />
+ <circle cx="98" cy="962" r="28.5" fill="BLACK" />
+ <circle cx="674" cy="1489" r="28.5" fill="BLUE" />
+ <circle cx="1297" cy="298" r="28.5" fill="PURPLE" />
+ <circle cx="876" cy="508" r="28.5" fill="GREEN" />
+<circle cx="876" cy="508" r="18.5" fill="GHOSTWHITE" />
+<circle cx="876" cy="508" r="8.5" fill="GREEN" />
+ <circle cx="1064" cy="73" r="28.5" fill="BROWN" />
+ <circle cx="282" cy="434" r="28.5" fill="YELLOW" />
+<circle cx="282" cy="434" r="18.5" fill="GHOSTWHITE" />
+<circle cx="282" cy="434" r="8.5" fill="YELLOW" />
+ <circle cx="494" cy="1003" r="28.5" fill="PURPLE" />
+<circle cx="494" cy="1003" r="18.5" fill="GHOSTWHITE" />
+<circle cx="494" cy="1003" r="8.5" fill="PURPLE" />
+ <circle cx="570" cy="447" r="28.5" fill="RED" />
+ <circle cx="854" cy="367" r="28.5" fill="ORANGE" />
+<circle cx="854" cy="367" r="18.5" fill="GHOSTWHITE" />
+<circle cx="854" cy="367" r="8.5" fill="ORANGE" />
+ <circle cx="951" cy="341" r="28.5" fill="BROWN" />
+<circle cx="951" cy="341" r="18.5" fill="GHOSTWHITE" />
+<circle cx="951" cy="341" r="8.5" fill="BROWN" />
+ <circle cx="675" cy="2025" r="28.5" fill="WHITE" />
+</svg>

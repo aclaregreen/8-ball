@@ -1,0 +1,28 @@
+svg {
+    max-width: 500px;
+    max-height: 500px;
+  }
+
+#playerTurn {
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 36px;
+}
+
+#ballType {
+  position: fixed;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 36px;
+}
+#winner {
+  position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    z-index: 9999;
+}
