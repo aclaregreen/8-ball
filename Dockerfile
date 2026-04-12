@@ -3,7 +3,7 @@ FROM python:3.12-slim
 RUN apt-get update && apt-get install -y \
     clang \
     swig \
-    libpython3.12-dev \
+    python3.12-dev \
     make \
     && rm -rf /var/lib/apt/lists/*
 
