@@ -100,7 +100,8 @@ Each shot saves only the final table state, keeping the database small while pre
 
 ```bash
 make
-python Server.py 8080
+export LD_LIBRARY_PATH=.
+python3 Server.py 8080
 ```
 
 Then open [http://localhost:8080](http://localhost:8080).
