@@ -20,10 +20,10 @@ class MyHandler( BaseHTTPRequestHandler ):
         parsed  = urlparse( self.path );
 
         # check if the web-pages matches the list
-        if parsed.path in [ '/shoot.html' ]:
+        if parsed.path in [ '/', '/shoot.html' ]:
 
             # retreive the HTML file
-            fp = open( '.'+self.path );
+            fp = open( './shoot.html' if parsed.path == '/' else '.'+self.path );
             content = fp.read();
 
             # generate the headers
