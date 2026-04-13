@@ -11,7 +11,7 @@
 
 #define PHYLIB_SIM_RATE (0.0001) // s
 #define PHYLIB_VEL_EPSILON (0.01) // mm/s
-#define PHYLIB_DRAG (150.0) // mm/s^2
+#define PHYLIB_DRAG (300.0) // mm/s^2
 
 #define PHYLIB_MAX_TIME (600) // s
 
