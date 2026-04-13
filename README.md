@@ -15,14 +15,14 @@ A browser-based 8-ball pool game with a custom physics engine written in C, expo
 The core simulation is written in C (`phylib.c` / `phylib.h`). It models the full physics of a pool table:
 
 - **Ball types**: still balls and rolling balls, each with position, velocity, and acceleration vectors
-- **Object types**: balls, holes, horizontal cushions, and vertical cushions — all stored in a tagged union (`phylib_object`) for uniform handling
+- **Object types**: balls, holes, horizontal cushions, and vertical cushions, all stored in a tagged union (`phylib_object`) for uniform handling
 - **Simulation**: `phylib_roll` advances a ball's position and velocity over a time step using kinematic equations with drag deceleration (`150 mm/s²`)
 - **Collision detection**: `phylib_distance` computes geometry-aware distances between any two object types (ball-ball, ball-hole, ball-cushion), and `phylib_bounce` resolves elastic collisions
 - **Segmented simulation**: `phylib_segment` advances the table until the next collision event, enabling frame-by-frame animation without simulating the entire shot at once
 
 ### Python Bindings (SWIG)
 
-`phylib.i` defines a SWIG interface that wraps the C structs and functions into a Python module. This lets `Physics.py` work with C-level objects directly — no data marshalling overhead.
+`phylib.i` defines a SWIG interface that wraps the C structs and functions into a Python module. This lets `Physics.py` work with C-level objects directly, no data marshalling overhead.
 
 The `makefile` handles the full build chain:
 
@@ -47,7 +47,7 @@ The `Game.shoot()` method runs the segmented simulation loop, collecting every i
 
 ### Backend (`Server.py`)
 
-A lightweight HTTP server built on Python's standard `http.server` module — no frameworks.
+A lightweight HTTP server built on Python's standard `http.server` module.
 
 | Route                | Method | Description                                                                      |
 | -------------------- | ------ | -------------------------------------------------------------------------------- |
@@ -58,7 +58,7 @@ A lightweight HTTP server built on Python's standard `http.server` module — no
 
 ### Frontend (`game.js` + `shoot.html`)
 
-The frontend is plain HTML, CSS, and jQuery — no framework.
+The frontend is plain HTML, CSS, and jQuery.
 
 - Players aim by clicking and dragging from the cue ball; a directional line is drawn in real time using SVG
 - On mouse release, the drag vector is converted to a velocity and POSTed to `/shot`
