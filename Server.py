@@ -52,7 +52,7 @@ class MyHandler( BaseHTTPRequestHandler ):
             except FileNotFoundError:
                 self.send_error(404, "File Not Found")
 
-        elif parsed.path in ["/display.css"]:
+        elif parsed.path in ["/display.css", "/shoot.css"]:
             fp = open("."+ self.path)
             content = fp.read()
             self.send_response(200)
