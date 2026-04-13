@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /app
 
 COPY phylib.c phylib.h phylib.i makefile ./
-COPY Physics.py Server.py game.js display.css shoot.html table.svg ./
+COPY Physics.py Server.py game.js display.css shoot.css shoot.html table.svg ./
 
 RUN make PYTHON=/usr/local/include/python3.12/
 
