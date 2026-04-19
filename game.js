@@ -22,7 +22,8 @@ $(document).ready(function () {
     var x;
     var y;
 
-    ball.mousedown(function (event) {
+    ball.on("mousedown touchstart", function (event) {
+      if (event.type === "touchstart") event.preventDefault();
       var ballX = parseFloat(ball.attr("cx"));
       var ballY = parseFloat(ball.attr("cy"));
 
@@ -38,7 +39,9 @@ $(document).ready(function () {
       svg.append(line);
 
       // Update the line's end point as the mouse moves within the SVG container
-      $(document).mousemove(function (event) {
+      $(document).on("mousemove touchmove", function (event) {
+        var touch = event.originalEvent.touches && event.originalEvent.touches[0];
+        if (touch) { event.pageX = touch.pageX; event.pageY = touch.pageY; }
         var ballX = parseFloat($("circle[fill='WHITE']").attr("cx"));
         var ballY = parseFloat($("circle[fill='WHITE']").attr("cy"));
 
@@ -71,15 +74,14 @@ $(document).ready(function () {
 
         // Log the mouse coordinates for debugging
       });
-      $(document).mouseup(function (event) {
-        // Remove the mousemove event listener
+      $(document).on("mouseup touchend", function (event) {
         var velx = (ballX - x) * 13;
         var vely = (ballY - y) * 13;
         shoot(velx, vely, id);
 
         line.remove();
-        $(document).off("mousemove");
-        $(document).off("mouseup");
+        $(document).off("mousemove touchmove");
+        $(document).off("mouseup touchend");
         //svg.empty();
       });
     });
