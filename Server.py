@@ -87,7 +87,64 @@ class MyHandler( BaseHTTPRequestHandler ):
                 gameId = int(gameId)
 
             if gameId is not None:
-                game = Physics.Game(gameId)
+                try:
+                    game = Physics.Game(gameId)
+                except (TypeError, Exception):
+                    self.send_response(200)
+                    self.send_header("Content-type", "text/html")
+                    self.end_headers()
+                    self.wfile.write(b"""<!DOCTYPE html>
+<html>
+<head>
+  <title>Game Not Found</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0f0f0f;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+    }
+    .card {
+      background: #1a1a1a;
+      border: 1px solid #2e2e2e;
+      border-radius: 16px;
+      padding: 2rem;
+      width: 100%;
+      max-width: 460px;
+      text-align: center;
+    }
+    h1 { font-size: 28px; font-weight: 500; margin-bottom: 0.75rem; }
+    p { color: #888888; font-size: 14px; margin-bottom: 1.5rem; }
+    a {
+      display: inline-block;
+      height: 40px;
+      line-height: 40px;
+      padding: 0 24px;
+      border-radius: 8px;
+      border: 1px solid #3a3a3a;
+      background: transparent;
+      color: #ffffff;
+      font-size: 14px;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+    a:hover { background: #2e2e2e; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Game not found</h1>
+    <p>No game exists with that ID.</p>
+    <a href="shoot.html">Back</a>
+  </div>
+</body>
+</html>""")
+                    return
+
             else:
                 game = Physics.Game(None, gameName, player1, player2)
             id = game.gameID
